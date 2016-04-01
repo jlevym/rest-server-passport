@@ -46,7 +46,7 @@ exports.verifyAdmin = function (req, res, next) {
     var flag = req.decoded._doc.admin;
     // decode token
     if (flag == false) {
-                var err = new Error('You are not admin!');
+                var err = new Error('You are not admin! please go to localhttp:3443/users for more information');
                 err.status = 401;
                 return next(err);
      } else {
